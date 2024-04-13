@@ -2,24 +2,31 @@ package com.app.demo.controller;
 
 import com.app.demo.model.Employee;
 import com.app.demo.service.EmployeeService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/v1/employees")
 public class EmployeeController {
 
+    private final EmployeeService employeeService;
+
     @Autowired
-    private EmployeeService employeeService;
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @GetMapping("/{id}")
-    public Optional<Employee> findById(@PathVariable String id) {
+    public Employee findById(@PathVariable String id) throws IOException {
         return employeeService.findById(id);
+    }
+
+    @PostMapping("/add")
+    public String insertEmployee(@RequestBody Employee employee) throws IOException {
+        return employeeService.insertNewEmployee(employee);
     }
 
 }

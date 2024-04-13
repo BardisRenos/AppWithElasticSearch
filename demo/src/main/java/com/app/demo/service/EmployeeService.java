@@ -4,20 +4,24 @@ import com.app.demo.dao.EmployeeRepository;
 import com.app.demo.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.Optional;
+import java.io.IOException;
 
 @Service
 public class EmployeeService {
+    private final EmployeeRepository elasticSearchQuery;
 
     @Autowired
-    private EmployeeRepository employeeRepository;
-
-    @GetMapping("/{id}")
-    public Optional<Employee> findById(@PathVariable String id) {
-        return employeeRepository.findById(id);
+    public EmployeeService(EmployeeRepository elasticSearchQuery) {
+        this.elasticSearchQuery = elasticSearchQuery;
     }
 
+    public Employee findById(@PathVariable String id) throws IOException {
+        return elasticSearchQuery.findDocById(id);
+    }
+
+    public String insertNewEmployee(Employee employee) throws IOException {
+        return elasticSearchQuery.createOrUpdateDocument(employee);
+    }
 }
