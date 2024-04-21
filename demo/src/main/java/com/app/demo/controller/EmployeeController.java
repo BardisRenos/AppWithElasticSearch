@@ -2,7 +2,6 @@ package com.app.demo.controller;
 
 import com.app.demo.model.Employee;
 import com.app.demo.service.EmployeeService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

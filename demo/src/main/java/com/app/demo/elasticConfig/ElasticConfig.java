@@ -1,4 +1,4 @@
-package com.app.demo.ElasticConfig;
+package com.app.demo.elasticConfig;
 
 import co.elastic.clients.json.jackson.JacksonJsonpMapper;
 import co.elastic.clients.transport.ElasticsearchTransport;
@@ -17,14 +17,13 @@ public class ElasticConfig {
     public RestClient getRestClient() {
         return RestClient.builder(
                 new HttpHost("localhost", 9200)).setDefaultHeaders(new Header[]{
-                        new BasicHeader("Content-type", "application/json")
+                new BasicHeader("Content-type", "application/json")
         }).build();
     }
 
     @Bean
-    public  ElasticsearchTransport getElasticsearchTransport() {
+    public ElasticsearchTransport getElasticsearchTransport() {
         return new RestClientTransport(
                 getRestClient(), new JacksonJsonpMapper());
     }
-
 }
