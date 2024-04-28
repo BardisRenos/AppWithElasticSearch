@@ -2,6 +2,22 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../AlgorithmsWithJava" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../FDproject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Microservice-Applicaiton-Cap-Test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../MicroserviceSpringBoot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Rest-Api-with-Spring-Boot-Atos" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../RestApplicationCapTest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Spring-Boot-with-Spock-Testing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Spring-MVC-Tutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../SpringBootElasticsearchExample" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../WeibisWebSite" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../crmProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../elasticsearch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../grpc-with-springboot" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../microservice-application-kafka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../spring-boot-graphql-query-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../springboot-cucumber" vcs="Git" />
   </component>
 </project>
